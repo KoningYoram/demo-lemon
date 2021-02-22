@@ -1,0 +1,3 @@
+Mainly relying  on shopify to provide the heavy lifting on the "webshop" part of the operation. Since it's a big platform with a lot of easy integrations it means that even if the surrounding technologies should be swapped out later on, shopify is a solid foundation to build around.
+For the backend I've chosen NextJS since is is the preferred framework to integrate shopify into and also  works flawlessly with React, which makes that the per default option for frontend.
+Bpost is the premier carrier in Belgium for  it's wide range of solutions and since it now also supports third party api integration for it's business partners it should be relatively easily to automate the order-shipment flow and be able to be competitive with other stores who have next-day-delivery.
