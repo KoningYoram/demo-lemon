@@ -1,0 +1,20 @@
+<img 
+*ngIf="(current$ | async).artworkUrl100"
+src="{{ (current$ | async).artworkUrl100 }}" />
+<h1>
+    {{ (current$ | async).trackName }}
+</h1>
+<b>
+    {{ (current$ | async).artistName }}
+</b>
+<audio controls>
+    <source src="{{(current$ | async).previewUrl}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+</audio>
+<a href="{{ (current$ | async).trackViewUrl  }}" target="_new">
+    See online
+</a>
+<hr />
+<button (click)="goBack()">
+    Back to overview
+</button>

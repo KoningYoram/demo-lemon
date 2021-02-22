@@ -1,0 +1,11 @@
+table{
+    & > tbody {
+        tr{
+            border-bottom: 2px solid black;
+        }
+        td{
+            border: 1px solid grey;
+            padding: 5px;
+        }
+    }
+}

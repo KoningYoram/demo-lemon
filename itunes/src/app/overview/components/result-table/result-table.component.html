@@ -1,0 +1,37 @@
+<ng-container *ngIf="results?.length > 0; else noResult">
+    <h1 *ngIf="queryString">Results for: {{ queryString }} </h1>
+    <table >
+        <thead>
+            <tr>
+                <th>Album art</th>
+                <th>Artist</th>
+                <th>Trackname</th>
+                <th>Album</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let result of results" (click)="onRowClicked(result.trackId)">
+                <td>
+                    <img
+                        *ngIf="result.artworkUrl60"
+                        src="{{ result.artworkUrl60 }}"
+                    />
+                </td>
+                <td>
+                    {{ result.artistName }}
+                </td>
+                <td>
+                    {{ result.trackName }}
+                </td>
+                <td>
+                    {{ result.collectionName }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+
+
+<ng-template #noResult>
+    No results found <span *ngIf="queryString">for {{ queryString }}</span>
+</ng-template>

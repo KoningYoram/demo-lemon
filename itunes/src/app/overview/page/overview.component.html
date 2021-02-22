@@ -1,0 +1,17 @@
+<input 
+    [readonly]="loading$ | async"
+    [disabled]="loading$ | async"
+    type="text" 
+    placeholder="Start typing to search"
+    [formControl]="searchQuery" />
+
+<app-loader *ngIf="(loading$ | async)"></app-loader>
+
+<ng-container *ngIf="!(loading$ | async)">
+    <app-result-table
+        [queryString]="searchQuery.value"
+        [results]="searchResults$ | async"
+        (rowClicked)="goToDetails($event)"
+    >
+    </app-result-table>
+</ng-container>
