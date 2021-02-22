@@ -2,7 +2,7 @@
     [readonly]="loading$ | async"
     [disabled]="loading$ | async"
     type="text" 
-    placeholder="Start typing to search"
+    placeholder="Please type a filter"
     [formControl]="searchQuery" />
 
 <app-loader *ngIf="(loading$ | async)"></app-loader>

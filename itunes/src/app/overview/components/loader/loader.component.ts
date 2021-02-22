@@ -2,6 +2,6 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'app-loader',
-    template: `Loading...`
+    template: `Seaching`
 })
 export class LoaderComponent{}

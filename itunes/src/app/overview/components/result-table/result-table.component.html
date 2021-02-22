@@ -7,10 +7,11 @@
                 <th>Artist</th>
                 <th>Trackname</th>
                 <th>Album</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let result of results" (click)="onRowClicked(result.trackId)">
+            <tr *ngFor="let result of results">
                 <td>
                     <img
                         *ngIf="result.artworkUrl60"
@@ -25,6 +26,9 @@
                 </td>
                 <td>
                     {{ result.collectionName }}
+                </td>
+                <td>
+                    <button (click)="onRowClicked(result.trackId)">Details</button>
                 </td>
             </tr>
         </tbody>
